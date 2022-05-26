@@ -2,6 +2,7 @@ import CreateGameBoard from "./Gameboard.js";
 import CreatePlayer from "./Player.js";
 import ControlGame from "./ControlGame.js";
 import { updateDisplay, updatePoint, playAgainPopUp } from "./Display";
+import "../style.css";
 
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
