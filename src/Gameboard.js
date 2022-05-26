@@ -1,10 +1,9 @@
 export default function CreateGameBoard() {
   let gameBoard = ["", "", "", "", "", "", "", "", ""];
 
-  return { gameBoard, getArrayValue, addSymbol, resetGame };
+  return { getArrayValue, addSymbol, resetGame };
 
   function addSymbol(symbol, position) {
-    console.log(gameBoard);
     gameBoard[Number(position)] = String(symbol);
   }
 
@@ -13,7 +12,6 @@ export default function CreateGameBoard() {
   }
 
   function resetGame() {
-    // console.log(gameBoard);
     gameBoard = ["", "", "", "", "", "", "", "", ""];
   }
 }

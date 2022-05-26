@@ -1,17 +1,18 @@
 export default function ControlGame(player1, player2) {
   let round = 0;
 
-  return { addRound, CurrentPlayerPlaying, checkWin };
+  return { addRound, CurrentPlayerPlaying, checkWin, resetRounds };
 
   function addRound() {
     round += 1;
+    console.log(round);
   }
 
   function CurrentPlayerPlaying() {
     if (round % 2) {
-      return player1;
-    } else {
       return player2;
+    } else {
+      return player1;
     }
   }
 
@@ -34,9 +35,13 @@ export default function ControlGame(player1, player2) {
         console.log(`congratulation ${CurrentPlayerPlaying()}`);
         return true;
       }
-      // console.log(array[i] !== "", array[i]);
     }
 
     return false;
+  }
+
+  function resetRounds() {
+    round = 0;
+    console.log(round);
   }
 }
